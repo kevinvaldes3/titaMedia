@@ -1,0 +1,266 @@
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+h1,
+a,
+li {
+    font-family: "Questrial", sans-serif;
+}
+.subTitle {
+    font-family: "Montserrat", sans-serif !important;
+}
+#appHtml {
+    transition: all 2s ease-in;
+    animation: mymove 5s infinite;
+}
+
+nav {
+    background: white;
+    height: 80px;
+    width: 100%;
+}
+
+nav ul {
+    float: right;
+    margin-right: 30px;
+}
+
+nav ul li {
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+
+nav ul li a {
+    color: rgb(63, 62, 62);
+    font-size: 16px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: capitalize;
+}
+
+li a.active,
+li a:hover {
+    background: hotpink;
+    color: white;
+    font-weight: bold;
+    transition: 0.5s;
+}
+
+.fa-solid .fa-magnifying-glass {
+    display: none;
+    visibility: none;
+}
+
+.searchClass {
+    display: none;
+    visibility: none;
+}
+
+.menubtn {
+    font-size: 30px;
+    color: rgb(0, 0, 0);
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+#check {
+    display: none;
+}
+
+.selection {
+    background: url(../../imagen/slider1.jpg) no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 90vh;
+    padding: 25vh 0;
+}
+.containerSelection {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.containerSelection h1 {
+    color: white;
+    text-transform: uppercase;
+    font-family: "Montserrat", sans-serif !important;
+}
+
+.containerSelection .btnSelection {
+    background: white;
+    width: 100px;
+    height: 28px;
+    font-size: 12px;
+    margin: 30px 0 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: hotpink;
+}
+
+.paragraph {
+    margin: 8px;
+    font-size: 12px;
+    color: white;
+    font-family: "Questrial", sans-serif;
+}
+.containerIcon {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    height: 20px;
+    margin: 44px 0;
+}
+.containerIcon a {
+    margin: 2px 23px;
+    font-size: 22px;
+    color: hotpink;
+}
+
+.centerNav {
+    align-items: center;
+    align-content: center;
+    display: flex;
+    justify-content: center;
+}
+.containerImg {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(360px, auto));
+    grid-auto-rows: minmax(300px, auto);
+    gap: 20px;
+    padding: 20px;
+    grid-auto-flow: dense;
+}
+
+.containerImgOneColumns{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: minmax(383px, auto);
+    gap: 25px;
+    padding: 20px 214px;
+}
+
+.Img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    transition: transfron 0.3s aese-in-out;
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+}
+
+.Img:hover {
+    filter: opacity(0.9);
+    transform: scale(1.04);
+}
+
+@media (max-width: 952px) {
+    nav ul li a {
+        font-size: 14px;
+    }
+
+    .containerSelection {
+        width: 100%;
+    }
+
+    .containerSelection h1 {
+        font-size: 20px;
+    }
+    .paragraph {
+        font-size: 10px;
+    }
+    .containerImgOneColumns{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(700px, auto));
+        grid-auto-rows: minmax(300px, auto);
+        gap: 20px;
+        padding: 20px;
+        grid-auto-flow: dense;
+    }
+}
+
+@media (max-width: 758px) {
+    nav {
+        background: white;
+        height: 100%;
+        width: 100%;
+    }
+    .menubtn {
+        display: block;
+    }
+    ul {
+        position: fixed;
+        width: 80%;
+        height: 100%;
+        background: #c5bebe;
+        top: 0px;
+        left: -100%;
+        text-align: center;
+        transition: all 0.5s;
+        opacity: 0.8;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    nav ul li a {
+        font-size: 20px;
+        font-weight: 600;
+    }
+
+    li a.active,
+    li a:hover {
+        background: hotpink;
+        color: white;
+        width: 200px;
+        opacity: 1;
+    }
+    .containerSelection .btnSelection {
+        margin: 25px 0 0 0;
+    }
+    .paragraph {
+        font-size: 9px;
+    }
+
+    #check:checked ~ ul {
+        left: 0;
+    }
+    .containerIcon {
+        display: none;
+        visibility: none;
+    }
+
+    .centerNav {
+        display: none;
+        visibility: none;
+    }
+    .containerSelection {
+        width: 100%;
+    }
+
+    .containerSelection h1 {
+        font-size: 19px;
+    }
+    .containerImgOneColumns{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-auto-rows: minmax(300px, auto);
+        gap: 20px;
+        padding: 20px;
+        grid-auto-flow: dense;
+    }
+}
